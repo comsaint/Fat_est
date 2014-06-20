@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66D3AF0817C74806009C7D40 /* ControllerFatEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D3AF0517C74805009C7D40 /* ControllerFatEstimator.h */; };
+		66D3AF0917C74806009C7D40 /* ControllerFatEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3AF0617C74806009C7D40 /* ControllerFatEstimator.m */; };
+		66D3AF0A17C74806009C7D40 /* ControllerFatEstimator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D3AF0717C74806009C7D40 /* ControllerFatEstimator.xib */; };
+		8420023212E829A200E1E9CE /* OsiriXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8420023112E829A200E1E9CE /* OsiriXAPI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8D5B49AE048680CD000E48DA /* Fat_Estimation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF630370AF2F00C91783 /* Fat_Estimation_Prefix.pch */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		ABA48A650680BB600089EB4F /* Fat_EstimationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA48A640680BB600089EB4F /* Fat_EstimationFilter.h */; };
+		ABA48A670680BB690089EB4F /* Fat_EstimationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA48A660680BB690089EB4F /* Fat_EstimationFilter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* Fat_Estimation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fat_Estimation_Prefix.pch; sourceTree = "<group>"; };
+		66C78B6A1951442A0081A670 /* libITKBiasCorrection-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKBiasCorrection-4.1.a"; sourceTree = "<group>"; };
+		66C78B6B1951442A0081A670 /* libITKBioCell-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKBioCell-4.1.a"; sourceTree = "<group>"; };
+		66C78B6C1951442A0081A670 /* libITKCommon-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKCommon-4.1.a"; sourceTree = "<group>"; };
+		66C78B6D1951442A0081A670 /* libITKDeprecated-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKDeprecated-4.1.a"; sourceTree = "<group>"; };
+		66C78B6E1951442A0081A670 /* libITKDICOMParser-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKDICOMParser-4.1.a"; sourceTree = "<group>"; };
+		66C78B6F1951442A0081A670 /* libITKEXPAT-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKEXPAT-4.1.a"; sourceTree = "<group>"; };
+		66C78B701951442A0081A670 /* libITKFEM-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKFEM-4.1.a"; sourceTree = "<group>"; };
+		66C78B711951442A0081A670 /* libitkgdcmCommon-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmCommon-4.1.a"; sourceTree = "<group>"; };
+		66C78B721951442A0081A670 /* libitkgdcmDICT-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmDICT-4.1.a"; sourceTree = "<group>"; };
+		66C78B731951442A0081A670 /* libitkgdcmDSED-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmDSED-4.1.a"; sourceTree = "<group>"; };
+		66C78B741951442A0081A670 /* libitkgdcmIOD-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmIOD-4.1.a"; sourceTree = "<group>"; };
+		66C78B751951442A0081A670 /* libitkgdcmjpeg12-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmjpeg12-4.1.a"; sourceTree = "<group>"; };
+		66C78B761951442A0081A670 /* libitkgdcmjpeg16-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmjpeg16-4.1.a"; sourceTree = "<group>"; };
+		66C78B771951442A0081A670 /* libitkgdcmjpeg8-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmjpeg8-4.1.a"; sourceTree = "<group>"; };
+		66C78B781951442A0081A670 /* libitkgdcmMSFF-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmMSFF-4.1.a"; sourceTree = "<group>"; };
+		66C78B791951442A0081A670 /* libitkgdcmuuid-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkgdcmuuid-4.1.a"; sourceTree = "<group>"; };
+		66C78B7A1951442A0081A670 /* libITKgiftiio-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKgiftiio-4.1.a"; sourceTree = "<group>"; };
+		66C78B7B1951442A0081A670 /* libitkhdf5-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkhdf5-4.1.a"; sourceTree = "<group>"; };
+		66C78B7C1951442A0081A670 /* libitkhdf5_cpp-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkhdf5_cpp-4.1.a"; sourceTree = "<group>"; };
+		66C78B7D1951442A0081A670 /* libITKIOBioRad-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOBioRad-4.1.a"; sourceTree = "<group>"; };
+		66C78B7E1951442A0081A670 /* libITKIOBMP-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOBMP-4.1.a"; sourceTree = "<group>"; };
+		66C78B7F1951442A0081A670 /* libITKIOCSV-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOCSV-4.1.a"; sourceTree = "<group>"; };
+		66C78B801951442A0081A670 /* libITKIOGDCM-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOGDCM-4.1.a"; sourceTree = "<group>"; };
+		66C78B811951442A0081A670 /* libITKIOGE-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOGE-4.1.a"; sourceTree = "<group>"; };
+		66C78B821951442A0081A670 /* libITKIOGIPL-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOGIPL-4.1.a"; sourceTree = "<group>"; };
+		66C78B831951442A0081A670 /* libITKIOHDF5-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOHDF5-4.1.a"; sourceTree = "<group>"; };
+		66C78B841951442A0081A670 /* libITKIOImageBase-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOImageBase-4.1.a"; sourceTree = "<group>"; };
+		66C78B851951442A0081A670 /* libITKIOIPL-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOIPL-4.1.a"; sourceTree = "<group>"; };
+		66C78B861951442A0081A670 /* libITKIOJPEG-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOJPEG-4.1.a"; sourceTree = "<group>"; };
+		66C78B871951442A0081A670 /* libITKIOLSM-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOLSM-4.1.a"; sourceTree = "<group>"; };
+		66C78B881951442A0081A670 /* libITKIOMesh-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOMesh-4.1.a"; sourceTree = "<group>"; };
+		66C78B891951442A0081A670 /* libITKIOMeta-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOMeta-4.1.a"; sourceTree = "<group>"; };
+		66C78B8A1951442A0081A670 /* libITKIONIFTI-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIONIFTI-4.1.a"; sourceTree = "<group>"; };
+		66C78B8B1951442A0081A670 /* libITKIONRRD-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIONRRD-4.1.a"; sourceTree = "<group>"; };
+		66C78B8C1951442A0081A670 /* libITKIOPNG-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOPNG-4.1.a"; sourceTree = "<group>"; };
+		66C78B8D1951442A0081A670 /* libITKIOSiemens-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOSiemens-4.1.a"; sourceTree = "<group>"; };
+		66C78B8E1951442A0081A670 /* libITKIOSpatialObjects-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOSpatialObjects-4.1.a"; sourceTree = "<group>"; };
+		66C78B8F1951442A0081A670 /* libITKIOStimulate-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOStimulate-4.1.a"; sourceTree = "<group>"; };
+		66C78B901951442A0081A670 /* libITKIOTIFF-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOTIFF-4.1.a"; sourceTree = "<group>"; };
+		66C78B911951442A0081A670 /* libITKIOTransformBase-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOTransformBase-4.1.a"; sourceTree = "<group>"; };
+		66C78B921951442A0081A670 /* libITKIOTransformHDF5-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOTransformHDF5-4.1.a"; sourceTree = "<group>"; };
+		66C78B931951442A0081A670 /* libITKIOTransformInsightLegacy-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOTransformInsightLegacy-4.1.a"; sourceTree = "<group>"; };
+		66C78B941951442A0081A670 /* libITKIOTransformMatlab-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOTransformMatlab-4.1.a"; sourceTree = "<group>"; };
+		66C78B951951442A0081A670 /* libITKIOVTK-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOVTK-4.1.a"; sourceTree = "<group>"; };
+		66C78B961951442A0081A670 /* libITKIOXML-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKIOXML-4.1.a"; sourceTree = "<group>"; };
+		66C78B971951442A0081A670 /* libitkjpeg-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkjpeg-4.1.a"; sourceTree = "<group>"; };
+		66C78B981951442A0081A670 /* libITKKLMRegionGrowing-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKKLMRegionGrowing-4.1.a"; sourceTree = "<group>"; };
+		66C78B991951442A0081A670 /* libITKLabelMap-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKLabelMap-4.1.a"; sourceTree = "<group>"; };
+		66C78B9A1951442A0081A670 /* libITKMesh-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKMesh-4.1.a"; sourceTree = "<group>"; };
+		66C78B9B1951442B0081A670 /* libITKMetaIO-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKMetaIO-4.1.a"; sourceTree = "<group>"; };
+		66C78B9C1951442B0081A670 /* libitkNetlibSlatec-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkNetlibSlatec-4.1.a"; sourceTree = "<group>"; };
+		66C78B9D1951442B0081A670 /* libITKniftiio-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKniftiio-4.1.a"; sourceTree = "<group>"; };
+		66C78B9E1951442B0081A670 /* libITKNrrdIO-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKNrrdIO-4.1.a"; sourceTree = "<group>"; };
+		66C78B9F1951442B0081A670 /* libitkopenjpeg-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkopenjpeg-4.1.a"; sourceTree = "<group>"; };
+		66C78BA01951442B0081A670 /* libITKOptimizers-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKOptimizers-4.1.a"; sourceTree = "<group>"; };
+		66C78BA11951442B0081A670 /* libITKOptimizersv4-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKOptimizersv4-4.1.a"; sourceTree = "<group>"; };
+		66C78BA21951442B0081A670 /* libITKPath-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKPath-4.1.a"; sourceTree = "<group>"; };
+		66C78BA31951442B0081A670 /* libitkpng-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkpng-4.1.a"; sourceTree = "<group>"; };
+		66C78BA41951442B0081A670 /* libITKPolynomials-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKPolynomials-4.1.a"; sourceTree = "<group>"; };
+		66C78BA51951442B0081A670 /* libITKQuadEdgeMesh-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKQuadEdgeMesh-4.1.a"; sourceTree = "<group>"; };
+		66C78BA61951442B0081A670 /* libITKReview-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKReview-4.1.a"; sourceTree = "<group>"; };
+		66C78BA71951442B0081A670 /* libITKSpatialObjects-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKSpatialObjects-4.1.a"; sourceTree = "<group>"; };
+		66C78BA81951442B0081A670 /* libITKStatistics-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKStatistics-4.1.a"; sourceTree = "<group>"; };
+		66C78BA91951442B0081A670 /* libitksys-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitksys-4.1.a"; sourceTree = "<group>"; };
+		66C78BAA1951442B0081A670 /* libitktestlib-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitktestlib-4.1.a"; sourceTree = "<group>"; };
+		66C78BAB1951442B0081A670 /* libitktiff-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitktiff-4.1.a"; sourceTree = "<group>"; };
+		66C78BAC1951442B0081A670 /* libitkv3p_lsqr-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkv3p_lsqr-4.1.a"; sourceTree = "<group>"; };
+		66C78BAD1951442B0081A670 /* libitkv3p_netlib-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkv3p_netlib-4.1.a"; sourceTree = "<group>"; };
+		66C78BAE1951442B0081A670 /* libitkvcl-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkvcl-4.1.a"; sourceTree = "<group>"; };
+		66C78BAF1951442B0081A670 /* libITKVideoCore-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKVideoCore-4.1.a"; sourceTree = "<group>"; };
+		66C78BB01951442B0081A670 /* libITKVideoIO-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKVideoIO-4.1.a"; sourceTree = "<group>"; };
+		66C78BB11951442B0081A670 /* libitkvnl-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkvnl-4.1.a"; sourceTree = "<group>"; };
+		66C78BB21951442B0081A670 /* libitkvnl_algo-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkvnl_algo-4.1.a"; sourceTree = "<group>"; };
+		66C78BB31951442B0081A670 /* libITKVNLInstantiation-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKVNLInstantiation-4.1.a"; sourceTree = "<group>"; };
+		66C78BB41951442B0081A670 /* libITKVTK-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKVTK-4.1.a"; sourceTree = "<group>"; };
+		66C78BB51951442B0081A670 /* libITKWatersheds-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKWatersheds-4.1.a"; sourceTree = "<group>"; };
+		66C78BB61951442B0081A670 /* libitkzlib-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libitkzlib-4.1.a"; sourceTree = "<group>"; };
+		66C78BB71951442B0081A670 /* libITKznz-4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libITKznz-4.1.a"; sourceTree = "<group>"; };
+		66D3AF0517C74805009C7D40 /* ControllerFatEstimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerFatEstimator.h; sourceTree = "<group>"; };
+		66D3AF0617C74806009C7D40 /* ControllerFatEstimator.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ControllerFatEstimator.m; sourceTree = "<group>"; };
+		66D3AF0717C74806009C7D40 /* ControllerFatEstimator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerFatEstimator.xib; sourceTree = "<group>"; };
+		8420023112E829A200E1E9CE /* OsiriXAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OsiriXAPI.framework; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5D36050680E57E00F4007A /* Fat_Estimation.osirixplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fat_Estimation.osirixplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA48A640680BB600089EB4F /* Fat_EstimationFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Fat_EstimationFilter.h; sourceTree = "<group>"; };
+		ABA48A660680BB690089EB4F /* Fat_EstimationFilter.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = Fat_EstimationFilter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				8420023212E829A200E1E9CE /* OsiriXAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Fat_Estimation */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Fat_Estimation;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8420023112E829A200E1E9CE /* OsiriXAPI.framework */,
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66D3AF0717C74806009C7D40 /* ControllerFatEstimator.xib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB2C26750677B0C400A08910 /* Fat_EstimationFilter */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66C78AF11951442A0081A670 /* ITK180 */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB5D36050680E57E00F4007A /* Fat_Estimation.osirixplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* Fat_Estimation_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		66C78AF11951442A0081A670 /* ITK180 */ = {
+			isa = PBXGroup;
+			children = (
+				66C78B6A1951442A0081A670 /* libITKBiasCorrection-4.1.a */,
+				66C78B6B1951442A0081A670 /* libITKBioCell-4.1.a */,
+				66C78B6C1951442A0081A670 /* libITKCommon-4.1.a */,
+				66C78B6D1951442A0081A670 /* libITKDeprecated-4.1.a */,
+				66C78B6E1951442A0081A670 /* libITKDICOMParser-4.1.a */,
+				66C78B6F1951442A0081A670 /* libITKEXPAT-4.1.a */,
+				66C78B701951442A0081A670 /* libITKFEM-4.1.a */,
+				66C78B711951442A0081A670 /* libitkgdcmCommon-4.1.a */,
+				66C78B721951442A0081A670 /* libitkgdcmDICT-4.1.a */,
+				66C78B731951442A0081A670 /* libitkgdcmDSED-4.1.a */,
+				66C78B741951442A0081A670 /* libitkgdcmIOD-4.1.a */,
+				66C78B751951442A0081A670 /* libitkgdcmjpeg12-4.1.a */,
+				66C78B761951442A0081A670 /* libitkgdcmjpeg16-4.1.a */,
+				66C78B771951442A0081A670 /* libitkgdcmjpeg8-4.1.a */,
+				66C78B781951442A0081A670 /* libitkgdcmMSFF-4.1.a */,
+				66C78B791951442A0081A670 /* libitkgdcmuuid-4.1.a */,
+				66C78B7A1951442A0081A670 /* libITKgiftiio-4.1.a */,
+				66C78B7B1951442A0081A670 /* libitkhdf5-4.1.a */,
+				66C78B7C1951442A0081A670 /* libitkhdf5_cpp-4.1.a */,
+				66C78B7D1951442A0081A670 /* libITKIOBioRad-4.1.a */,
+				66C78B7E1951442A0081A670 /* libITKIOBMP-4.1.a */,
+				66C78B7F1951442A0081A670 /* libITKIOCSV-4.1.a */,
+				66C78B801951442A0081A670 /* libITKIOGDCM-4.1.a */,
+				66C78B811951442A0081A670 /* libITKIOGE-4.1.a */,
+				66C78B821951442A0081A670 /* libITKIOGIPL-4.1.a */,
+				66C78B831951442A0081A670 /* libITKIOHDF5-4.1.a */,
+				66C78B841951442A0081A670 /* libITKIOImageBase-4.1.a */,
+				66C78B851951442A0081A670 /* libITKIOIPL-4.1.a */,
+				66C78B861951442A0081A670 /* libITKIOJPEG-4.1.a */,
+				66C78B871951442A0081A670 /* libITKIOLSM-4.1.a */,
+				66C78B881951442A0081A670 /* libITKIOMesh-4.1.a */,
+				66C78B891951442A0081A670 /* libITKIOMeta-4.1.a */,
+				66C78B8A1951442A0081A670 /* libITKIONIFTI-4.1.a */,
+				66C78B8B1951442A0081A670 /* libITKIONRRD-4.1.a */,
+				66C78B8C1951442A0081A670 /* libITKIOPNG-4.1.a */,
+				66C78B8D1951442A0081A670 /* libITKIOSiemens-4.1.a */,
+				66C78B8E1951442A0081A670 /* libITKIOSpatialObjects-4.1.a */,
+				66C78B8F1951442A0081A670 /* libITKIOStimulate-4.1.a */,
+				66C78B901951442A0081A670 /* libITKIOTIFF-4.1.a */,
+				66C78B911951442A0081A670 /* libITKIOTransformBase-4.1.a */,
+				66C78B921951442A0081A670 /* libITKIOTransformHDF5-4.1.a */,
+				66C78B931951442A0081A670 /* libITKIOTransformInsightLegacy-4.1.a */,
+				66C78B941951442A0081A670 /* libITKIOTransformMatlab-4.1.a */,
+				66C78B951951442A0081A670 /* libITKIOVTK-4.1.a */,
+				66C78B961951442A0081A670 /* libITKIOXML-4.1.a */,
+				66C78B971951442A0081A670 /* libitkjpeg-4.1.a */,
+				66C78B981951442A0081A670 /* libITKKLMRegionGrowing-4.1.a */,
+				66C78B991951442A0081A670 /* libITKLabelMap-4.1.a */,
+				66C78B9A1951442A0081A670 /* libITKMesh-4.1.a */,
+				66C78B9B1951442B0081A670 /* libITKMetaIO-4.1.a */,
+				66C78B9C1951442B0081A670 /* libitkNetlibSlatec-4.1.a */,
+				66C78B9D1951442B0081A670 /* libITKniftiio-4.1.a */,
+				66C78B9E1951442B0081A670 /* libITKNrrdIO-4.1.a */,
+				66C78B9F1951442B0081A670 /* libitkopenjpeg-4.1.a */,
+				66C78BA01951442B0081A670 /* libITKOptimizers-4.1.a */,
+				66C78BA11951442B0081A670 /* libITKOptimizersv4-4.1.a */,
+				66C78BA21951442B0081A670 /* libITKPath-4.1.a */,
+				66C78BA31951442B0081A670 /* libitkpng-4.1.a */,
+				66C78BA41951442B0081A670 /* libITKPolynomials-4.1.a */,
+				66C78BA51951442B0081A670 /* libITKQuadEdgeMesh-4.1.a */,
+				66C78BA61951442B0081A670 /* libITKReview-4.1.a */,
+				66C78BA71951442B0081A670 /* libITKSpatialObjects-4.1.a */,
+				66C78BA81951442B0081A670 /* libITKStatistics-4.1.a */,
+				66C78BA91951442B0081A670 /* libitksys-4.1.a */,
+				66C78BAA1951442B0081A670 /* libitktestlib-4.1.a */,
+				66C78BAB1951442B0081A670 /* libitktiff-4.1.a */,
+				66C78BAC1951442B0081A670 /* libitkv3p_lsqr-4.1.a */,
+				66C78BAD1951442B0081A670 /* libitkv3p_netlib-4.1.a */,
+				66C78BAE1951442B0081A670 /* libitkvcl-4.1.a */,
+				66C78BAF1951442B0081A670 /* libITKVideoCore-4.1.a */,
+				66C78BB01951442B0081A670 /* libITKVideoIO-4.1.a */,
+				66C78BB11951442B0081A670 /* libitkvnl-4.1.a */,
+				66C78BB21951442B0081A670 /* libitkvnl_algo-4.1.a */,
+				66C78BB31951442B0081A670 /* libITKVNLInstantiation-4.1.a */,
+				66C78BB41951442B0081A670 /* libITKVTK-4.1.a */,
+				66C78BB51951442B0081A670 /* libITKWatersheds-4.1.a */,
+				66C78BB61951442B0081A670 /* libitkzlib-4.1.a */,
+				66C78BB71951442B0081A670 /* libITKznz-4.1.a */,
+			);
+			name = ITK180;
+			path = ../../osirix/osirix/ITK180/lib;
+			sourceTree = "<group>";
+		};
+		AB2C26750677B0C400A08910 /* Fat_EstimationFilter */ = {
+			isa = PBXGroup;
+			children = (
+				ABA48A640680BB600089EB4F /* Fat_EstimationFilter.h */,
+				ABA48A660680BB690089EB4F /* Fat_EstimationFilter.m */,
+				66D3AF0517C74805009C7D40 /* ControllerFatEstimator.h */,
+				66D3AF0617C74806009C7D40 /* ControllerFatEstimator.m */,
+			);
+			name = Fat_EstimationFilter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D5B49AD048680CD000E48DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49AE048680CD000E48DA /* Fat_Estimation_Prefix.pch in Headers */,
+				ABA48A650680BB600089EB4F /* Fat_EstimationFilter.h in Headers */,
+				66D3AF0817C74806009C7D40 /* ControllerFatEstimator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Fat_Estimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6A9A9008AC841300D0C1EE /* Build configuration list for PBXNativeTarget "Fat_Estimation" */;
+			buildPhases = (
+				8D5B49AD048680CD000E48DA /* Headers */,
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				8D5B49B5048680CD000E48DA /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fat_Estimation;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Invert;
+			productReference = AB5D36050680E57E00F4007A /* Fat_Estimation.osirixplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = CE6A9A9408AC841300D0C1EE /* Build configuration list for PBXProject "Fat_Estimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Fat_Estimation */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Fat_Estimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				66D3AF0A17C74806009C7D40 /* ControllerFatEstimator.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D5B49B5048680CD000E48DA /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA48A670680BB690089EB4F /* Fat_EstimationFilter.m in Sources */,
+				66D3AF0917C74806009C7D40 /* ControllerFatEstimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE6A9A9108AC841300D0C1EE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Fat_Estimation_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Plug-ins";
+				LIBRARY_SEARCH_PATHS = /Users/longpun/osirix/osirix/ITK180/lib;
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Fat_Estimation;
+				SDKROOT = macosx10.8;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "ITK180/Modules/Core/Common/include ITK180/Modules/ThirdParty/VNL/src/vxl/core ITK180/Modules/ThirdParty/VNL/src/vxl/vcl ITK180/Modules/Core/Common ITK180/Modules/Core/Mesh/include ITK180/Modules/Segmentation/RegionGrowing/include ITK180/Modules/Filtering/CurvatureFlow/include ITK180/Modules/Core/ImageFunction/include ITK180/Modules/Core/FiniteDifference/include ITK180/Modules/Filtering/ImageFilterBase/include ITK180/Modules/Segmentation/LevelSets/include ITK180/Modules/Filtering/FastMarching/include ITK180/Modules/Filtering/ImageIntensity/include ITK180/Modules/Filtering/MathematicalMorphology/include ITK180/Modules/Bridge/VTK/include ITK180/Modules/Core/Transform/include ITK180/Modules/Filtering/BinaryMathematicalMorphology/include ITK180/Modules/ThirdParty/NrrdIO/src/NrrdIO ITK180/Modules/Filtering/** ITK180/Modules/Numerics/Polynomials/include ITK180/Modules/Numerics/**";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = osirixplugin;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		CE6A9A9208AC841300D0C1EE /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Fat_Estimation_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Plug-ins";
+				LIBRARY_SEARCH_PATHS = /Users/longpun/osirix/osirix/ITK180/lib;
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Fat_Estimation;
+				SDKROOT = macosx10.8;
+				SECTORDER_FLAGS = "";
+				USER_HEADER_SEARCH_PATHS = "ITK180/Modules/Core/Common/include ITK180/Modules/ThirdParty/VNL/src/vxl/core ITK180/Modules/ThirdParty/VNL/src/vxl/vcl ITK180/Modules/Core/Common ITK180/Modules/Core/Mesh/include ITK180/Modules/Segmentation/RegionGrowing/include ITK180/Modules/Filtering/CurvatureFlow/include ITK180/Modules/Core/ImageFunction/include ITK180/Modules/Core/FiniteDifference/include ITK180/Modules/Filtering/ImageFilterBase/include ITK180/Modules/Segmentation/LevelSets/include ITK180/Modules/Filtering/FastMarching/include ITK180/Modules/Filtering/ImageIntensity/include ITK180/Modules/Filtering/MathematicalMorphology/include ITK180/Modules/Bridge/VTK/include ITK180/Modules/Core/Transform/include ITK180/Modules/Filtering/BinaryMathematicalMorphology/include ITK180/Modules/ThirdParty/NrrdIO/src/NrrdIO ITK180/Modules/Filtering/** ITK180/Modules/Numerics/Polynomials/include ITK180/Modules/Numerics/**";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = osirixplugin;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		CE6A9A9508AC841300D0C1EE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Development;
+		};
+		CE6A9A9608AC841300D0C1EE /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE6A9A9008AC841300D0C1EE /* Build configuration list for PBXNativeTarget "Fat_Estimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6A9A9108AC841300D0C1EE /* Development */,
+				CE6A9A9208AC841300D0C1EE /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		CE6A9A9408AC841300D0C1EE /* Build configuration list for PBXProject "Fat_Estimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6A9A9508AC841300D0C1EE /* Development */,
+				CE6A9A9608AC841300D0C1EE /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
